@@ -9,15 +9,16 @@
 </head>
 <body>
     <div class="title-box">
-        <h1 class="title-text">Seeing Through the Overlap: The Impact of Color and Opacity</h1>
-        <h1 class="title-text">on Depth Order Perception in Visualization</h1>
+        <h1 class="title-text">Self-Supervised Continuous Colormap Recovery from a</h1>
+        <h1 class="title-text">2D Scalar Field Visualization without a Legend</h1>
     </div>
     <div class="author-box">
-        <p class="author-text">Zhiyuan Meng<sup>1</sup></p>
-        <p class="author-text">Yunpeng Yang<sup>1</sup></p>
+        <p class="author-text">Hongxu Liu<sup>1</sup></p>
         <p class="author-text"><a href="https://qiongzn.github.io/">Qiong Zeng</a><sup>1</sup></p>
-        <p class="author-text">Kecheng Lu<sup>1</sup></p>
-        <p class="author-text">Lin Lu<sup>1</sup></p>
+        <p class="author-text">Xinyu Chen<sup>1</sup></p>
+        <p class="author-text">Haoyang Zheng<sup>1</sup></p>
+        <p class="author-text">Manyi Li<sup>1</sup></p>
+        <p class="author-text">Zhenfan Liu<sup>1</sup></p>  
         <p class="author-text">Changhe Tu<sup>1</sup></p>
         <p class="author-text">Funmeng Yang<sup>3</sup></p>
         <p class="author-text"><a href="http://www.yunhaiwang.net/">Yunhai Wang</a><sup>2</sup></p>
@@ -33,17 +34,24 @@
     <div class="content">
         <h2>Abstract:</h2>
         <p class="content-text">
-            Semi-transparent visualizations are commonly used to reveal information in overlapped regions by applying colors and opacity.
-            While a few studies made recommendations on how to choose colors and opacity levels to maintain depth perception, they often conflict and overlook the interaction effect between these factors.
-            In this paper, we systematically explore the impact of color and opacity on depth order perception across eight colors, three opacity levels, and various layer orders and arrangements.
-            Our inferential analysis shows that both color hue and opacity significantly influence depth order perception, with the effectiveness depending on their interaction. We also derived 12 features for predictive analysis, achieving the best mean accuracy of 80.72\% and mean F1 score of 87.75\%, with opacity assigned to the front layer as the top feature for most models.
-            Finally, we provide a small design tool and four guidelines to better align the design rules of colors and opacity in semi-transparent visualizations.
+            Recovering a continuous colormap from a single 2D scalar field visualization can be quite challenging, especially in the
+            absence of a corresponding color legend. In this paper, we propose a novel colormap recovery approach that extracts the colormap
+            from a color-encoded 2D scalar field visualization by simultaneously predicting the colormap and underlying data using a decoupling-
+            and-reconstruction strategy. Our approach first separates the input visualization into colormap and data using a decoupling module,
+            then reconstructs the visualization with a differentiable color-mapping module. To guide this process, we design a reconstruction
+            loss between the input and reconstructed visualizations, which serves both as a constraint to ensure strong correlation between
+            colormap and data during training, and as a self-supervised optimizer for fine-tuning the predicted colormap of unseen visualizations
+            during inferencing. To ensure smoothness and correct color ordering in the extracted colormap, we introduce a compact colormap
+            representation using cubic B-spline curves and an associated color order loss. We evaluate our method quantitatively and qualitatively
+            on a synthetic dataset and a collection of real-world visualizations from the VIS30K dataset [9]. Additionally, we demonstrate its utility in
+            two prototype applications—colormap adjustment and colormap transfer—and explore its generalization to visualizations with color
+            legends and ones encoded using discrete color palettes.
         </p>
     </div>
     <div class="content">
         <h2>Video:</h2>
         <video width="1000" controls="controls">
-            <source src="./static/chi25_979.mp4">
+            <source src="./static/vis25_1143.mp4">
             Your browser does not support HTML5 video.You could download the video in download part.
         </video>
     </div>
@@ -51,7 +59,7 @@
         <h2>Downloads:</h2>
         <div class="download-container">
             <div class="download-item">
-                <img src="./images/article_overview.jpg" alt="" width="100">
+                <img src="./images/article_overview.png" alt="" width="100">
             </div>
             <div class="download-item">
                 <img src="./images/code.png" alt="" width="100" style="margin-top: 20px;">
@@ -62,31 +70,31 @@
         </div>
         <div class="download-container">
             <div class="download-item">
-                <a href="./static/chi25_979.pdf">Article</a>
+                <a href="./static/vis25_1143.pdf">Article</a>
             </div>
             <div class="download-item">
-                <a href="https://osf.io/n3jg8/">Code & Data</a>
+                <a href="https://osf.io/gb2tx/?view_only=4d2a269b59bc4144b2806ec2d1a34e11">Code & Data</a>
             </div>
             <div class="download-item">
-                <a href="./static/chi25_979_pre.pdf">Slides</a>
+                <a href="./static/vis25_1143_pre.pdf">Slides</a>
             </div>
         </div>
     </div>
     <div class="content">
         <h2>Acknowledgement:</h2>
         <p class="content-text">
-            We would like to thank Weifeng Ni for his contributions to data collection.
+            <!-- We would like to thank Weifeng Ni for his contributions to data collection.
             In this study, Qiong Zeng is supported by grants from the National Key Research and Development Program of China (No. 2021YFF0704300) and the National Natural Science Foundation of China (No. 62372271);
             Lin Lu is supported by the National Natural Science Foundation of China (No. 62472258);
             and Yunhai Wang is supported by the National Natural Science Foundation of China (No. 62132017), the Natural Science Foundation of Shandong Province (No. ZQ2022JQ32),
             the Fundamental Research Funds for the Central Universities, the Natural Science Foundation of Beijing Municipality (No. L247027),
-            and the Research Funds of Renmin University of China.
+            and the Research Funds of Renmin University of China. -->
         </p>
     </div>
     <div class="content">
         <h2>Bibtex:</h2>
         <p class="content-text">
-            @inproceedings{depthorderperception, <br>
+            <!-- @inproceedings{depthorderperception, <br>
             title = {Seeing Through the Overlap: The Impact of Color and Opacity on Depth Order Perception in Visualization}, <br>
             author = {Zhiyuan Meng and Yunpeng Yang and Qiong Zeng and Kecheng Lu and Lin Lu and Changhe Tu and Funmeng Yang and Yunhai Wang}, <br>
             year = {2025}, <br>
@@ -99,7 +107,7 @@
             articleno = {}, <br>
             location = {Yokohama, Japan}, <br>
             series = {CHI '25} <br>
-            }
+            } -->
         </p>
     </div>
     <div style="height: 100px;"></div>
